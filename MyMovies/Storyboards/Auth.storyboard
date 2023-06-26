@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Auth View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="Y6W-OH-hqX" customClass="AuthViewController" customModule="MyMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEl-lK-5fd">
+                                <rect key="frame" x="0.0" y="59" width="393" height="48"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="themoviedblogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wu4-MW-1XW">
+                                        <rect key="frame" x="169" y="4" width="55" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Wu4-MW-1XW" secondAttribute="height" multiplier="55:40" id="a7i-xl-SFT"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.012198688460000001" green="0.14671921730000001" blue="0.25473293660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Wu4-MW-1XW" firstAttribute="top" secondItem="XEl-lK-5fd" secondAttribute="top" constant="4" id="Abr-po-k26"/>
+                                    <constraint firstAttribute="height" constant="48" id="V4C-DU-aGg"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wu4-MW-1XW" secondAttribute="bottom" constant="4" id="kBk-Nr-6wv"/>
+                                    <constraint firstItem="Wu4-MW-1XW" firstAttribute="centerX" secondItem="XEl-lK-5fd" secondAttribute="centerX" id="wb7-hy-GxE"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zS7-xA-Add" userLabel="Backgroung Image View">
+                                <rect key="frame" x="0.0" y="106.99999999999997" width="393" height="511.33333333333326"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtS-gL-cN6">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eb3-T1-kLG">
+                                        <rect key="frame" x="16" y="703" width="361" height="48"/>
+                                        <color key="backgroundColor" red="0.18431372549019609" green="0.3522180915" blue="0.41511747240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="kok-7G-F4S"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign In">
+                                            <fontDescription key="titleFontDescription" name="BodoniSvtyTwoOSITCTT-Book" family="Bodoni 72 Oldstyle" pointSize="28"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="signInButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="o1D-Gm-Cuz"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQq-B9-e4t" userLabel="password" customClass="InputView" customModule="MyMovies" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="623" width="377" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="pR6-9J-BMq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8U3-V4-PF0" userLabel="login" customClass="InputView" customModule="MyMovies" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="543" width="377" height="64"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="iUB-NV-qq8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8U3-V4-PF0" firstAttribute="leading" secondItem="WtS-gL-cN6" secondAttribute="leading" constant="8" id="FH6-3l-KzY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Eb3-T1-kLG" secondAttribute="bottom" constant="8" id="Ika-J2-71k"/>
+                                    <constraint firstItem="qQq-B9-e4t" firstAttribute="leading" secondItem="WtS-gL-cN6" secondAttribute="leading" constant="8" id="MO1-wa-gdB"/>
+                                    <constraint firstAttribute="trailing" secondItem="8U3-V4-PF0" secondAttribute="trailing" constant="8" id="fYE-cB-G2k"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eb3-T1-kLG" secondAttribute="trailing" constant="16" id="g4s-La-SoN"/>
+                                    <constraint firstItem="qQq-B9-e4t" firstAttribute="top" secondItem="8U3-V4-PF0" secondAttribute="bottom" constant="16" id="lYW-ek-Pqz"/>
+                                    <constraint firstItem="Eb3-T1-kLG" firstAttribute="top" secondItem="qQq-B9-e4t" secondAttribute="bottom" constant="16" id="q3R-SV-oxJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="qQq-B9-e4t" secondAttribute="trailing" constant="8" id="wZK-hX-aaQ"/>
+                                    <constraint firstItem="Eb3-T1-kLG" firstAttribute="leading" secondItem="WtS-gL-cN6" secondAttribute="leading" constant="16" id="ycS-Kh-276"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.012198688460000001" green="0.14671921730000001" blue="0.25473293660000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zS7-xA-Add" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7Eg-hp-ORN"/>
+                            <constraint firstItem="WtS-gL-cN6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="7KQ-q0-STj"/>
+                            <constraint firstItem="XEl-lK-5fd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="8bz-r2-Pwe"/>
+                            <constraint firstItem="WtS-gL-cN6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Jhy-HM-hNE"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XEl-lK-5fd" secondAttribute="trailing" id="Y16-Hq-AHm"/>
+                            <constraint firstItem="WtS-gL-cN6" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Yl4-TQ-4iX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zS7-xA-Add" secondAttribute="trailing" id="jEl-GA-jSd"/>
+                            <constraint firstItem="WtS-gL-cN6" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="noO-EL-7zT"/>
+                            <constraint firstItem="XEl-lK-5fd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="px1-jj-cpe"/>
+                            <constraint firstItem="zS7-xA-Add" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="0.6" id="sOq-nR-IB0"/>
+                            <constraint firstItem="zS7-xA-Add" firstAttribute="top" secondItem="XEl-lK-5fd" secondAttribute="bottom" id="tK2-0h-9Jh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authFormView" destination="WtS-gL-cN6" id="Kgp-XS-UeN"/>
+                        <outlet property="backroundImageView" destination="zS7-xA-Add" id="S6h-rr-xHy"/>
+                        <outlet property="bottomSignInButtonConstraint" destination="Ika-J2-71k" id="xvV-kx-NEm"/>
+                        <outlet property="loginInputView" destination="8U3-V4-PF0" id="FQy-sz-F6y"/>
+                        <outlet property="passwordInputView" destination="qQq-B9-e4t" id="9m5-df-l50"/>
+                        <outlet property="signInButton" destination="Eb3-T1-kLG" id="S2L-ww-RPx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="17.557251908396946" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="themoviedblogo" width="185.03999328613281" height="133.39999389648438"/>
+    </resources>
+</document>
